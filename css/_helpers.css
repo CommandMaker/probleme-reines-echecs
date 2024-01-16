@@ -4,3 +4,12 @@
     max-width: 1500px;
     margin: 0 auto;
 }
+
+.section-title {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+section.section {
+    margin: 30px auto;
+}
