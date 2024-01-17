@@ -9,6 +9,25 @@ header.app-header {
     top: 0;
 
     --text-color: #fff;
+
+    transition: .3s ease-in-out;
+}
+
+header.app-header.background {
+    --text-color: #000;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header.app-header.background nav ul a {
+    text-shadow: none;
+}
+
+header.app-header .logo {
+    height: 70px;
+    width: 70px;
+    mask: url('../images/logo.svg') no-repeat center;
+    background: var(--text-color);
 }
 
 header.app-header nav {
@@ -16,6 +35,7 @@ header.app-header nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header.app-header nav ul {
