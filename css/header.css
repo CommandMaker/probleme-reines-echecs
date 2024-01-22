@@ -34,9 +34,18 @@ header.app-header .logo {
 header.app-header nav {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     align-items: center;
+}
+
+header.app-header nav ul.left {
+    justify-self: flex-start;
+}
+
+header.app-header nav ul.right {
+    justify-self: flex-end;
 }
 
 header.app-header nav ul {

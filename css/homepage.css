@@ -13,11 +13,17 @@
 
     position: relative;
     z-index: -1;
+    margin-bottom: 3rem;
 }
 
 .app-homepage .landing-page {
     width: 80%;
     margin: 0 auto;
+}
+
+.app-homepage .landing-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .app-homepage .landing-page p {
@@ -42,5 +48,23 @@
     border-top: none;
     border-right: none;
     transform: translateY(-3px) rotate(-45deg);
+}
 
+/* Homepage contents design */
+section.homepage-section {
+    width: 100%;
+    margin: 4rem 0;
+
+    color: var(--text-color);
+}
+
+section.homepage-section.dark {
+    background: #1f1f1f;
+    padding: 3rem 0;
+    --text-color: #fff;
+}
+
+.homepage-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
 }
