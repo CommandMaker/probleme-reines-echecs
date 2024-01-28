@@ -25,7 +25,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    border-right: 1px dashed #111;
+    border-right: 1px dashed var(--text-color);
 }
 
 .splitted::after {
@@ -35,7 +35,7 @@
     left: 50%;
     width: 50px;
     height: 100px;
-    background: #111;
+    background: var(--text-color);
     mask: url('../images/separator.svg') no-repeat center;
     -webkit-mask: url('../images/separator.svg') no-repeat center;
     transform: translate(-50%, -50%);
@@ -50,7 +50,7 @@
     position: absolute;
     top: 50%;
     right: calc(var(--gap) * -1);
-    background: #fff;
+    background: var(--background);
     width: 50px;
     height: 130px;
     transform: translate(-50%, -50%);

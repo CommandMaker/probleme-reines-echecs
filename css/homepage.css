@@ -52,6 +52,8 @@
 
 /* Homepage contents design */
 section.homepage-section {
+    --background: #fff;
+    --text-color: #1f1f1f;
     width: 100%;
     margin: 4rem 0;
 
@@ -59,9 +61,14 @@ section.homepage-section {
 }
 
 section.homepage-section.dark {
+    --background: #1f1f1f;
     background: #1f1f1f;
     padding: 3rem 0;
     --text-color: #fff;
+}
+
+section.homepage-section p {
+    margin-bottom: 1rem;
 }
 
 .homepage-section h2 {
