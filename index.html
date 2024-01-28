@@ -7,16 +7,18 @@
         <link href="css/app.css" rel="stylesheet">
     </head>
     <body>
+        <!-- TODO: footer -->
+
         <header class="app-header">
             <nav>
                 <ul class="left">
-                    <li><a href="#probleme">Le problème</a></li>
-                    <li><a href="#solutions">Les solutions</a></li>
+                    <li><a href="#probleme" class="header-animation" style="--animation-delay: .1s">Le problème</a></li>
+                    <li><a href="#solutions" class="header-animation" style="--animation-delay: .4s">Les solutions</a></li>
                 </ul>
-                <div class="logo"></div>
+                <div class="logo header-animation" style="--animation-delay: .7s"></div>
                 <ul class="right">
-                    <li><a href="#">Avantages / inconvénients</a></li>
-                    <li><a href="#">Comparaison des codes</a></li>
+                    <li><a href="#" class="header-animation" style="--animation-delay: 1.0s">Avantages / inconvénients</a></li>
+                    <li><a href="#" class="header-animation" style="--animation-delay: 1.3s">Comparaison des codes</a></li>
                 </ul>
             </nav>
         </header>
@@ -32,25 +34,29 @@
 
         <section id="probleme" class="homepage-section">
             <div class="container">
-                <h2>Le problème</h2>
+                <h2 class="unvisible">Le problème</h2>
 
-                <p>Le problème des reines consiste à placer<code>n</code> sur un échiquier de<code>n * n</code> cases sans que les reines ne se menacent mutuellement. Il y a donc forcément 1 seule reine par ligne et par colonne et par diagonale</p>
-                <p>Ce problème apparaît dans les années 1850 avec <i>Franz Nauck</i> qui est le premier à présenter ce problème. Il est ensuite retravaillé par des mathématiciens comme <a href="https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Friedrich Gauss</a>. Il a aussi été utilisé dans le jeu <i>The 7<sup>th</sup> Guest</i></p>
+                <div class="content unvisible">
+                    <p>Le problème des reines consiste à placer<code>n</code> sur un échiquier de<code>n * n</code> cases sans que les reines ne se menacent mutuellement. Il y a donc forcément 1 seule reine par ligne et par colonne et par diagonale</p>
+                    <p>Ce problème apparaît dans les années 1850 avec <i>Franz Nauck</i> qui est le premier à présenter ce problème. Il est ensuite retravaillé par des mathématiciens comme <a href="https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Friedrich Gauss</a>. Il a aussi été utilisé dans le jeu <i>The 7<sup>th</sup> Guest</i></p>
+                </div>
             </div>
         </section>
 
         <section id="solutions" class="homepage-section dark">
             <div class="container">
-                <h2>Les solutions proposées</h2>
+                <h2 class="unvisible">Les solutions proposées</h2>
 
-                <div class="splitted">
+                <div class="splitted unvisible">
                     <div>
                         <h3>La force brute</h3>
 
-                        <p>La première idée à laquelle on peut penser est d'essayer toutes les combinaison disponibles : c'est la force brute.</p>
+                        <p>La première idée à laquelle on peut penser est d'essayer toutes les combinaisons possibles : c'est la force brute.</p>
                         <p>La force brute consiste à essayer <strong>TOUTES</strong> les solutions possibles afin de ne garder que celles qui conviennent.</p>
                         <p>Pour ce faire, on peut utiliser diverses manières, comme des boucles imbriquées ou encore un produit cartésien (que j'ai choisi d'utliser). Chaque solution possède ses avantages comme une rapidité d'écriture et de lecture pour les boucles imbriquées et la possibilité de changer le nombre de reines facilement sur le produit cartésien.</p>
                         <p>Mais chacunes de ces approches possèdent des inconvénients, comme des problèmes de lisibilité en cas de nombre important de boucles ou encore une difficulté de compréhension avce le produit cartésien</p>
+
+                        <a href="#" style="text-align: center; display: inline-block; width: 100%;">Essayer cette méthode</a>
                     </div>
                     <div>
                         <h3>L'aléatoire</h3>

@@ -11,6 +11,7 @@ header.app-header {
     --text-color: #fff;
 
     transition: .3s ease-in-out;
+    z-index: 999999;
 }
 
 header.app-header.background {
@@ -81,4 +82,14 @@ header.app-header nav ul a::before {
 
 header.app-header nav ul a:hover::before {
     right: 0;
+}
+
+/**
+ * Animation
+ */
+header.app-header .header-animation {
+    display: block;
+    animation: header-animation .3s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: var(--animation-delay);
 }

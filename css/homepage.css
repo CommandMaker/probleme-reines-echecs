@@ -19,6 +19,7 @@
 .app-homepage .landing-page {
     width: 80%;
     margin: 0 auto;
+    animation: slide-left 1s ease-in-out;
 }
 
 .app-homepage .landing-page h1 {
@@ -35,6 +36,8 @@
     left: 50%;
     bottom: 2rem;
     transform: translateX(-50%);
+
+    animation: scroll-indication-animation 1s ease-in-out;
 }
 
 .app-homepage .scroll-indication::before {
@@ -74,4 +77,31 @@ section.homepage-section p {
 .homepage-section h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
+}
+
+/**
+ * Animations
+ */
+section.homepage-section h2.unvisible,
+section.homepage-section div.content.unvisible,
+section.homepage-section div.splitted.unvisible {
+    opacity: 0;
+}
+
+section.homepage-section h2,
+section.homepage-section div.content,
+section.homepage-section div.splitted {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+section.homepage-section h2.animation {
+    -webkit-animation: slide-left 1s ease-in-out;
+    animation: slide-left 1s ease-in-out;
+}
+
+section.homepage-section div.content.animation,
+section.homepage-section div.splitted.animation {
+    -webkit-animation: slide-right 1s ease-in-out;
+    animation: slide-right 1s ease-in-out;
 }
