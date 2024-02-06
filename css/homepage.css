@@ -105,3 +105,25 @@ section.homepage-section div.splitted.animation {
     -webkit-animation: slide-right 1s ease-in-out;
     animation: slide-right 1s ease-in-out;
 }
+
+a.demo-link {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: fit-content;
+
+    border: 1px solid var(--text-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+
+    position: relative;
+
+    transition: .2s ease-in-out;
+}
+
+a.demo-link:hover {
+    background: #fff;
+    --text-color: #000;
+}
+

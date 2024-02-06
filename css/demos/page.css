@@ -1,0 +1,93 @@
+.form {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.result-box {
+    --max-size: 650px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--max-size));
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+/**
+ * Chess board
+ */
+.board {
+    --cell-size: 75px;
+
+    height: calc(var(--cell-size) * var(--size) + 50px);
+    width: calc(var(--cell-size) * var(--size) + 50px);
+    position: relative;
+
+    display: flex;
+}
+
+.board .cells-container {
+    display: grid;
+    grid-template-columns: repeat(var(--size), var(--cell-size));
+    height: calc(var(--size) * var(--cell-size));
+}
+
+.board .cells-container .queen {
+    position: absolute;
+    top: var(--y);
+    left: calc(var(--x) + 50px);
+    width: 75px;
+    height: 75px;
+}
+
+.board .board-cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+}
+
+.board .board-cell.white {
+    background: #e9ecca;
+}
+
+.board .board-cell.black {
+    background: #779855;
+}
+
+.board .letters {
+    height: 50px;
+    width: calc(100% - 50px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.board .numbers {
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.board .numbers span {
+    display: block;
+    width: 50px;
+    height: var(--cell-size);
+
+    line-height: var(--cell-size);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.board .letters span {
+    width: var(--cell-size);
+    display: inline-block;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+}

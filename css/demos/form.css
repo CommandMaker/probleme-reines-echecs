@@ -1,0 +1,32 @@
+/**
+ * Text fields design
+ */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+
+    padding: .5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/**
+ * Buttons
+ */
+button {
+    text-wrap: nowrap;
+    padding: .5rem 1rem;
+
+    background: none;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+button:hover {
+    background: #1f1f1f;
+    color: #fff;
+}

@@ -4,11 +4,13 @@
 
 const header = document.querySelector('header.app-header');
 
-document.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight - 80) {
-        header.classList.add('background');
-        return;
-    }
+if (header !== null) {
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > window.innerHeight - 80) {
+            header.classList.add('background');
+            return;
+        }
 
-    header.classList.remove('background');
-});
+        header.classList.remove('background');
+    });
+}

@@ -7,3 +7,6 @@
 @import './header.css';
 @import './homepage.css';
 @import './splitted.css';
+
+@import './demos/form.css';
+@import './demos/page.css';

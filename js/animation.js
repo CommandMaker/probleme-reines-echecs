@@ -28,5 +28,7 @@ const elementsToAnimate = [
 ];
 
 elementsToAnimate.forEach(el => {
-    observer.observe(document.querySelector(el));
+    if (document.querySelector(el) !== null) {
+        observer.observe(document.querySelector(el));
+    }
 });
