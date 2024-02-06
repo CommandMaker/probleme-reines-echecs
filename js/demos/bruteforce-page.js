@@ -1,4 +1,4 @@
-if (!window.location.href.endsWith('/bruteforce')) throw new Error('Not bruteforce page ! Abort loading of demo');
+if (!window.location.href.slice(0, -1).endsWith('/bruteforce')) throw new Error('Not bruteforce page ! Abort loading of demo');
 
 import { bruteforce } from '../methods/bruteforce.js';
 import { Chessboard } from '../chessboard.js';
