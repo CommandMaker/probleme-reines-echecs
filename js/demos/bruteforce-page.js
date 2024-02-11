@@ -1,4 +1,6 @@
-if (!window.location.href.slice(0, -1).endsWith('/bruteforce')) throw new Error('Not bruteforce page ! Abort loading of demo');
+if (!window.location.href.slice(0, -1).endsWith('/bruteforce') &&
+    !window.location.href.endsWith('/bruteforce')) throw new Error('Not bruteforce page ! Abort loading of demo');
+
 
 import { bruteforce } from '../methods/bruteforce.js';
 import { Chessboard } from '../chessboard.js';
@@ -18,8 +20,7 @@ generateButton.onclick = () => {
         const solutions = bruteforce(Array.from(Array(+numberInput.value).keys()));
 
         const endTime = (Date.now() - startTime) * 10 ** -3;
-        document.querySelector('p#ellapsedTime').textContent = `${solutions.length} trouvées en ${endTime} secondes`;
-        console.log(solutions);
+        document.querySelector('p#ellapsedTime').textContent = `${solutions.length} solutions trouvées en ${endTime} secondes`;
 
         solutions.forEach(soluce => {
             const board = document.createElement('div');
