@@ -5,10 +5,10 @@
 }
 
 .result-box {
-    --max-size: 650px;
+    /*--max-size: 650px;*/
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--max-size));
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
     justify-items: center;
 }

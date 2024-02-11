@@ -14,13 +14,15 @@ generateButton.onclick = () => {
 
     if (numberInput.value === '') return;
 
+    resultBox.style.setProperty('--max-size', `${75 * +numberInput.value + 50}px`);
+
     (async () => {
         const startTime = Date.now();
 
         const solutions = bruteforce(Array.from(Array(+numberInput.value).keys()));
 
         const endTime = (Date.now() - startTime) * 10 ** -3;
-        document.querySelector('p#ellapsedTime').textContent = `${solutions.length} solutions trouvées en ${endTime} secondes`;
+        document.querySelector('p#ellapsedTime').textContent = `${solutions.length.toLocaleString()} solutions trouvées en ${endTime.toLocaleString()} secondes`;
 
         solutions.forEach(soluce => {
             const board = document.createElement('div');
