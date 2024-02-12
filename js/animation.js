@@ -27,8 +27,14 @@ const elementsToAnimate = [
     'section#solutions .splitted'
 ];
 
-elementsToAnimate.forEach(el => {
-    if (document.querySelector(el) !== null) {
-        observer.observe(document.querySelector(el));
-    }
+const unvisibleElements = document.querySelectorAll('.unvisible');
+
+unvisibleElements.forEach(el => {
+    observer.observe(el);
 });
+
+//elementsToAnimate.forEach(el => {
+//    if (document.querySelector(el) !== null) {
+//        observer.observe(document.querySelector(el));
+//    }
+//});

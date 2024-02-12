@@ -59,8 +59,13 @@ code {
     border-radius: 2px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     background: #e4e4e4;
+    color: #000;
 }
 
 a {
     color: var(--text-color);
+}
+
+ul {
+    padding-left: 3rem;
 }

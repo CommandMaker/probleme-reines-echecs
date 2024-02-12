@@ -61,6 +61,7 @@ section.homepage-section {
     margin: 4rem 0;
 
     color: var(--text-color);
+    position: relative;
 }
 
 section.homepage-section.dark {
@@ -116,8 +117,6 @@ a.demo-link {
     border: 1px solid var(--text-color);
     border-radius: 0.5rem;
     text-decoration: none;
-
-    position: relative;
 
     transition: .2s ease-in-out;
 }
