@@ -83,20 +83,23 @@ section.homepage-section p {
 /**
  * Animations
  */
-section.homepage-section h2.unvisible,
-section.homepage-section div.content.unvisible,
-section.homepage-section div.splitted.unvisible {
+.unvisible {
     opacity: 0;
 }
 
 section.homepage-section h2,
 section.homepage-section div.content,
-section.homepage-section div.splitted {
+section.homepage-section div.splitted,
+section.homepage-section div.code-comparison-conclusion,
+section.homepage-section div.conclusion-content {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
-section.homepage-section h2.animation {
+section.homepage-section h2.animation,
+section.homepage-section p.animation,
+section.homepage-section div.code-comparison-conclusion.animation,
+section.homepage-section div.conclusion-content.animation {
     -webkit-animation: slide-left 1s ease-in-out;
     animation: slide-left 1s ease-in-out;
 }

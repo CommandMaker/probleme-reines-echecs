@@ -17,8 +17,8 @@
                 </ul>
                 <div class="logo header-animation" style="--animation-delay: .7s"></div>
                 <ul class="right">
-                    <li><a href="#" class="header-animation" style="--animation-delay: 1.0s">Avantages / inconvénients</a></li>
-                    <li><a href="#" class="header-animation" style="--animation-delay: 1.3s">Comparaison des codes</a></li>
+                    <li><a href="#avantages" class="header-animation" style="--animation-delay: 1.0s">Avantages / inconvénients</a></li>
+                    <li><a href="#code-comparison" class="header-animation" style="--animation-delay: 1.3s">Comparaison des codes</a></li>
                 </ul>
             </nav>
         </header>
@@ -64,8 +64,8 @@
                         <div>
                             <p>La deuxième idée que l'on pourrait avoir serait d'utiliser une méthode <strong>aléatoire</strong>. En effet, cela nous permettrait de trouver les solutions à partir de positions générées au hasard.</p>
                             <p>L'aléatoire consiste à générer des tableaux de nombres aléatoires puis tester cette possibilité afin de ne garder que les positions valides.</p>
-                            <p>Pour ce faire, il est possible d'utiliser les outils d'aléatoires du language de programmation comme <code>random</code> dans Python ou <code>Math.random()</code> en JavaScript.</p>
-                            <p>Cette solution possède aussi des inconvénients détaillées <a href="#">plus bas</a>.</p>
+                            <p>Pour ce faire, il est possible d'utiliser les outils d'aléatoires du language de programmation comme <code>random</code> en Python ou <code>Math.random()</code> en JavaScript.</p>
+                            <p>Cette solution possède aussi des inconvénients détaillées <a href="#avantages">plus bas</a>.</p>
                         </div>
 
                         <a href="./aleatoire" class="demo-link" style="margin-top: auto;">Essayer cette méthode</a>
@@ -78,22 +78,76 @@
             <div class="container">
                 <h2 class="unvisible">Les avantages et inconvénients</h2>
 
-                Chaque méthode détaillée plus haut possède des avantages et des inconvénients détaillées ci-dessous :
+                <p class="unvisible">Chaque méthode détaillée plus haut possède des avantages et des inconvénients détaillées ci-dessous :</p>
+
+                <div class="splitted unvisible">
+                    <div style="display: flex; flex-direction: column;">
+                        <h3>La force brute</h3>
+
+                        <div style="margin-top: auto; margin-bottom: auto;">
+                            <p>La force brute possède de nombreux avantages :</p>
+
+                            <ul>
+                                <li>Il est impossible de rater une solution car chaque possibilité est essayée</li>
+                                <li>Le temps d'exécution est rapide</li>
+                                <li>Rapidité d'écriture et lisibilité</li>
+                            </ul>
+
+                            <p>Mais il possède également un <strong>inconvénient majeur</strong> : il peut consommer beaucoup de ressources et prendre beaucoup de temps.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>L'aléatoire</h3>
+
+                        <p>L'aléatoire va apporter des solutions aux inconvénients de la force brute : un temps d'execution plus rapide</p>
+                        <p>Mais l'aléatoire est comme son nom l'indique : aléatoire. En effet la vitesse d'exécution peut être controversée, car l'aléatoire peut parfois tester de nouveaux la même position. Prenont l'exemple de 4 reines (2 solutions et 256 possibilités) : lors des tests effectués, l'aléatoire a parfois réussi à trouver les 2 solutions existantes en <strong>144</strong> essais (moins que le nombre de solutions) mais peut parfois réussir en <strong>476</strong> essais (environ le double de possibilités).</p>
+                        <p>Pour 4 reines, la différence est moindre mais cela devient un problème lors d'un nombre important de solutions.</p>
+
+                        <p>L'aléatoire possède donc aussi des avantages comme la rapidité d'écriture mais aussi des inconvénients comme le temps d'exécution lors d'un nombre important de reines ou la possibilité d'oublier une solution (car on ne peut prévoir le nombre de solutions à l'avance).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="code-comparison" class="homepage-section dark">
+            <div class="container">
+                <h2 class="unvisible">Comparaison des codes</h2>
 
                 <div class="splitted unvisible">
                     <div>
                         <h3>La force brute</h3>
 
-                        <p>La force brute possède de nombreux avantages :</p>
-
-                        <ul>
-                            <li>Il est impossible de rater une solution car chaque possibilité est essayée</li>
-                        </ul>
+                        <iframe frameborder="0" scrolling="no" style="width:100%; height:583px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2FCommandMaker%2Fprobleme-reines-echecs%2Fblob%2Fmain%2Fjs%2Fmethods%2Fbruteforce.js&style=tokyo-night-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
                     </div>
-
                     <div>
                         <h3>L'aléatoire</h3>
+
+                        <iframe frameborder="0" scrolling="no" style="width:100%; height:751px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2FCommandMaker%2Fprobleme-reines-echecs%2Fblob%2Fmain%2Fjs%2Fmethods%2Faleatoire.js&style=tokyo-night-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
                     </div>
+                </div>
+
+                <div class="unvisible code-comparison-conclusion" style="margin-top: 1rem;">
+                    <p>Comme nous pouvons le constater, les deux codes sont de longueur équivalente (sans tenir compte des commentaires). Les codes ci-dessus ne contiennent pas la fonction de validation des positions, disponible <a href="https://github.com/CommandMaker/probleme-reines-echecs/blob/main/js/methods/validatePosition.j">ici</a></p>
+                    <p>Le code de la force brute effectue le produit cartésien du tableau donné en paramètre afin de trouver toutes les possibilités et toutes les solutions disponibles.</p>
+                    <p>L'aléatoire utilise quand à lui une boucle infinie qui génère des solutions jusqu'à en trouver une valide.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="homepage-section">
+            <div class="container">
+                <h2 class="unvisible">Conclusion</h2>
+
+                <div class="unvisible conclusion-content">
+                    <p>Pour conclure quant à quelle méthode est la meilleure, cela dépend de la situation :</p>
+                    <ul>
+                        <li>Dans le cas où l'on veut être sûr de n'oublier aucune solution et que l'on ne se soucie pas de l'exécution ou des ressources, la force brute est une bonne option.</li>
+                        <li>Lorsqu'on veut trouver des solutions rapidement, l'aléatoire peut être une bonne solution</li>
+                    </ul>
+
+                    <p>D'après mes tests, le temps d'exécution ne peut être un facteur de décision car au dessus de 8 reines, chacune des deux méthodes met un temps considérable pour trouver les solutions. Sur ma configuration, la force brute est toujours plus rapide que l'aléatoire mais cela peut varier selon la vôtre.</p>
+                    <p>Pour vous faire votre propre idée, vous pouvez essayer les <a href="#solutions">simulateurs</a> des deux méthodes.</p>
                 </div>
             </div>
         </section>
