@@ -64,6 +64,10 @@ section.homepage-section {
     position: relative;
 }
 
+section#conclusion {
+    margin-bottom: 2rem;
+}
+
 section.homepage-section.dark {
     --background: #1f1f1f;
     background: #1f1f1f;

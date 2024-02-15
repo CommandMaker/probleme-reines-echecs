@@ -1,0 +1,13 @@
+footer.footer {
+    display: flex;
+    justify-content: space-between;
+
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    font-size: 0.90rem;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
